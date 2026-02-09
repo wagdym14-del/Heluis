@@ -1,0 +1,39 @@
+# =================================================================
+# 🛡️ SOVEREIGN ELITE PROTOCOL - ENVIRONMENT CONFIGURATION v8.2
+# =================================================================
+
+# --- [ الوصول إلى الشبكة | NETWORK ACCESS ] ---
+# قائمة مفاتيح Helius الخمسة (تم تنظيفها وربطها للتدوير التلقائي)
+HELIUS_KEYS_POOL=bf07e2be-0b38-46bc-9854-ea2eaf7e5cbd,fda2c2ba-fa49-4774-a936-c8ce557095cf,dd331415-9569-4f5b-9c51-1b2bcba08bd6,8c93dc2d-2a37-4a5a-bc7e-cf151c081c45,cc521484-4293-45e4-963e-cf316cb08dd7,a3b3b6d9-d052-4866-bf72-70cd2766b6f9
+HELIUS_WS_URL=wss://mainnet.helius-rpc.com/?api-key=bf07e2be-0b38-46bc-9854-ea2eaf7e5cbd
+
+# --- [ مفاتيح التحليل الخارجي | EXTERNAL ANALYTICS ] ---
+BIRDEYE_API_KEY=96c1f1a99e034e6ba023e0f0cd24942d
+MORALIS_API_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJub25jZSI6Ijc4Y2U3NWRkLTdkM2ItNDA5Mi1hNmFmLTNhYTY3ZGM5MjM2ZSIsIm9yZ0lkIjoiNDk5MjYzIiwidXNlcklkIjoiNTEzNzQ3IiwidHlwZUlkIjoiZGYzNmQwMTctNDEwZi00ZjFkLTg5ZmItMjVlOTIyYzRjNzM2IiwidHlwZSI6IlBST0pFQ1QiLCJpYXQiOjE3NzA2MDAxODAsImV4cCI6NDkyNjM2MDE4MH0.I1HNjUefj8wW5lNCou4Tz0yj3VRMIzVkMhraRIQvPEA
+
+# --- [ إعدادات الأمان والتشفير ] ---
+SECRET_KEY=SOVEREIGN_78ce75dd_ELITE_FORCE
+ALGORITHM=HS256
+
+# --- [ نسبة الحساسية السلوكية | SENSITIVITY SETTINGS ] ---
+# حساسية التزامن: 500ms (لرصد تحركات الروبوتات المتزامنة)
+SYNC_TIME_THRESHOLD_MS=500
+# حساسية الارتداد: 0.65 (قوة الدعم المطلوبة للبقاء)
+MIN_POOL_RESILIENCE_RATIO=0.65
+# عتبة اتخاذ القرار: 0.75 (نسبة اليقين المطلوبة للإخلاء)
+DECISION_CONFIDENCE_THRESHOLD=0.75
+
+# --- [ إدارة المقاعد والرادار | CORE SETTINGS ] ---
+# تم الضبط بناءً على طلبك: 5 مقاعد، ورادار بفاصل 3 ثوانٍ
+MAX_SLOTS=5
+RADAR_DELAY=3
+
+# --- [ إعدادات النظام والواجهة ] ---
+DB_PATH=sovereign_patterns.db
+ENABLE_BEHAVIORAL_ARCHIVE=true
+NEXUS_PORT=8000
+NEXUS_HOST=0.0.0.0
+DEBUG_MODE=false
+
+# --- [ التمويه السيادي ] ---
+CLIENT_IDENTITY=Sovereign_Terminal_v8
