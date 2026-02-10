@@ -1,11 +1,14 @@
 # =================================================================
-# 🛡️ SOVEREIGN ELITE PROTOCOL - ENVIRONMENT CONFIGURATION v8.2
+# 🛡️ SOVEREIGN ELITE PROTOCOL - ENVIRONMENT CONFIGURATION v9.2.1
 # =================================================================
 
 # --- [ الوصول إلى الشبكة | NETWORK ACCESS ] ---
-# قائمة مفاتيح Helius الخمسة (تم تنظيفها وربطها للتدوير التلقائي)
-HELIUS_KEYS_POOL=bf07e2be-0b38-46bc-9854-ea2eaf7e5cbd,fda2c2ba-fa49-4774-a936-c8ce557095cf,dd331415-9569-4f5b-9c51-1b2bcba08bd6,8c93dc2d-2a37-4a5a-bc7e-cf151c081c45,cc521484-4293-45e4-963e-cf316cb08dd7,a3b3b6d9-d052-4866-bf72-70cd2766b6f9
-HELIUS_WS_URL=wss://mainnet.helius-rpc.com/?api-key=bf07e2be-0b38-46bc-9854-ea2eaf7e5cbd
+# قائمة المفاتيح للتدوير (المفتاح الأول هو المؤكد عمله بـ curl)
+HELIUS_KEYS_POOL=dd331415-9569-4f5b-9c51-1b2bcba08bd6,fda2c2ba-fa49-4774-a936-c8ce557095cf,bf07e2be-0b38-46bc-9854-ea2eaf7e5cbd,8c93dc2d-2a37-4a5a-bc7e-cf151c081c45,cc521484-4293-45e4-963e-cf316cb08dd7,a3b3b6d9-d052-4866-bf72-70cd2766b6f9
+
+# الروابط النشطة للمحرك (Direct Injection)
+HELIUS_RPC_URL=https://mainnet.helius-rpc.com/?api-key=dd331415-9569-4f5b-9c51-1b2bcba08bd6
+HELIUS_WS_URL=wss://mainnet.helius-rpc.com/?api-key=dd331415-9569-4f5b-9c51-1b2bcba08bd6
 
 # --- [ مفاتيح التحليل الخارجي | EXTERNAL ANALYTICS ] ---
 BIRDEYE_API_KEY=96c1f1a99e034e6ba023e0f0cd24942d
@@ -16,11 +19,11 @@ SECRET_KEY=SOVEREIGN_78ce75dd_ELITE_FORCE
 ALGORITHM=HS256
 
 # --- [ نسبة الحساسية السلوكية | SENSITIVITY SETTINGS ] ---
-# حساسية التزامن: 500ms (لرصد تحركات الروبوتات المتزامنة)
+# زمن التزامن لرصد بوتات MM: 500ms
 SYNC_TIME_THRESHOLD_MS=500
-# حساسية الارتداد: 0.65 (قوة الدعم المطلوبة للبقاء)
+# حساسية الارتداد (قوة الدعم): 0.65
 MIN_POOL_RESILIENCE_RATIO=0.65
-# عتبة اتخاذ القرار: 0.75 (نسبة اليقين المطلوبة للإخلاء)
+# عتبة اتخاذ القرار (اليقين): 0.75
 DECISION_CONFIDENCE_THRESHOLD=0.75
 
 # --- [ إدارة المقاعد والرادار | CORE SETTINGS ] ---
@@ -29,11 +32,12 @@ MAX_SLOTS=5
 RADAR_DELAY=3
 
 # --- [ إعدادات النظام والواجهة ] ---
-DB_PATH=sovereign_patterns.db
+DB_PATH=sovereign_v9_2.db
 ENABLE_BEHAVIORAL_ARCHIVE=true
 NEXUS_PORT=8000
 NEXUS_HOST=0.0.0.0
 DEBUG_MODE=false
 
-# --- [ التمويه السيادي ] ---
-CLIENT_IDENTITY=Sovereign_Terminal_v8
+# --- [ الهوية والتمويه السيادي ] ---
+CLIENT_IDENTITY=Sovereign_Terminal_v9_2
+ENABLE_FAKER_IDENTITY=true
